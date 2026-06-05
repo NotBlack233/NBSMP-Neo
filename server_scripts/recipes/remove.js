@@ -1,3 +1,5 @@
+// priority: 100
+
 ServerEvents.recipes(event => {
     /**
      * 
@@ -6,7 +8,10 @@ ServerEvents.recipes(event => {
      */
     const removeId = id => event.remove({'id': id})
 
-    // C
+    // TaCZ
+    event.remove({type: 'tacz:gun_smith_table_crafting'})
+
+    // Create
     removeId(/create:cutting\/compat\/immersiveengineering\/(.*)/)
 
     // C: Diesel Generators
@@ -19,6 +24,7 @@ ServerEvents.recipes(event => {
     removeId(/createaddition:crafting\/(.*)spool/)
     removeId(/createaddition:crafting\/(.*)connector/)
     removeId('createaddition:crafting/redstone_relay')
+    event.remove({type: 'createaddition:charging'})
 
     // C: New Age
     removeId(/create_new_age:sequenced_assembly\/reactor(.*)/)
@@ -33,4 +39,16 @@ ServerEvents.recipes(event => {
     removeId('create_new_age:shaped/fluxuated_magnetite')
     removeId('create_new_age:shaped/netherite_magnet')
     event.remove({'output': /create_new_age:(.*)wire/})
+
+    // IE
+    removeId('immersiveengineering:crafting/revolver')
+    removeId('immersiveengineering:crafting/speedloader')
+    removeId('immersiveengineering:crafting/gunpart_drum')
+    removeId('immersiveengineering:crafting/gunpart_barrel')
+    removeId('immersiveengineering:crafting/gunpart_hammer')
+    removeId(/immersiveengineering:crafting\/toolupgrade_revolver(.*)/)
+    removeId(/immersiveengineering:blueprint\/bullet(.*)/)
+
+    // Others
+    removeId('createrailwaysnavigator:navigator')
 })
