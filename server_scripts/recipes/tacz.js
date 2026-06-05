@@ -109,6 +109,13 @@ ServerEvents.recipes(event => {
         {item: {tag: 'c:nuggets/iron'}, count: 18}
     ])
 
+    // Attachment
+    gunsmith({type: 'attachment', id: 'tacz:scope_1873_6x'}, [
+        {item: {tag: 'c:ingots/brass'}, count: 16},
+        {item: {tag: 'c:plates/iron'}, count: 4},
+        {item: {tag: 'c:glass_blocks'}, count: 4}
+    ])
+
     // Early game
     gunsmith({type: 'gun', 'id': 'tacz:m1911'}, [
         {item: {tag: 'minecraft:logs'}, count: 8},
@@ -144,7 +151,11 @@ ServerEvents.recipes(event => {
     // Middle game
     gunsmith({type: 'gun', id: 'tacz:kar98'}, [
         {item: {tag: 'minecraft:logs'}, count: 40},
-        {item: {tag: 'c:plates/obsidian'}, count: 10}
+        {item: {item: 'immersiveengineering:component_iron'}, count: 18},
+        {item: {item: 'immersiveengineering:component_steel'}, count: 4},
+        {item: {tag: 'c:plates/obsidian'}, count: 16},
+        {item: {tag: 'c:plates/brass'}, count: 6},
+        {item: {item: 'create:precision_mechanism'}}
     ])
     // Late game
 })
