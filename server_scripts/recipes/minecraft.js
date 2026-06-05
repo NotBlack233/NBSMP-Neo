@@ -3,6 +3,7 @@ ServerEvents.recipes(event => {
     
     event.replaceInput({'id': 'mekanism_empowered:upgrade_empowered_energy'}, '#c:dusts/gold', Item.of('mekanism:upgrade_energy'))
     event.replaceInput({'id': 'mekanism_empowered:upgrade_empowered_speed'}, '#c:dusts/osmium', Item.of('mekanism:upgrade_speed'))
+    event.replaceInput({'id': 'tacz:gun_smith_table'}, '#minecraft:logs', Ingredient.of('#immersiveengineering:treated_wood'))
     
     event.shaped('createrailwaysnavigator:navigator', [
         'AIA',
