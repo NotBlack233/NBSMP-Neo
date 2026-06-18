@@ -8,6 +8,9 @@ ServerEvents.recipes(event => {
      */
     const removeId = id => event.remove({'id': id})
 
+    // BUGFIX
+    removeId('mekanism:module_teleportation_unit')
+
     // TaCZ
     event.remove({type: 'tacz:gun_smith_table_crafting'})
 
